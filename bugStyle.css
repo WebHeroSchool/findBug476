@@ -1,0 +1,186 @@
+.wrap {
+  background: url(../img/background.png) no-repeat;
+  background-size: cover;
+  font-family: 'roboto', sans-serif;
+  color: white;
+}
+.mainPage {
+  margin-left: 140px;
+  margin-top: 10vh;
+  height: 100vh;
+}
+.header {
+  font: 57px/40px 'roboto';
+  margin-bottom: 8px;
+}
+
+.insctruction {
+  font: 19px/24px roboto;
+}
+
+.list {
+  font: 50px/59px roboto;
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.list:hover{
+  cursor: pointer;
+  opacity: 80%;
+}
+
+.levelList {
+  margin-bottom: 50px;
+}
+
+.marker {
+  list-style-image: url(../img/mark.png);
+}
+
+.lightLevel {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  min-height: 625px;
+  perspective: 1000px;
+  }
+
+.newGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 20%);
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  min-height: 625px;
+  perspective: 1000px;
+}
+
+.card {
+  width: 218px;
+  height: 341px;
+  margin-bottom: 20px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 2s;
+  cursor: pointer;
+  }
+
+.card:hover {
+  transform: rotate(-3.08deg) translateY(-15px);
+  transition: transform .4s;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+ }
+
+.front-card,
+.back-card {
+  position: absolute;
+  height: 100%;
+ }
+
+.back-card {
+  transform: rotateY(180deg);
+}
+
+.card.flip {
+  transform: rotateY(180deg);
+}
+
+.light, .medium, .hard {
+  display: none;
+}
+
+.buttonWithCard {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  width: 352px;
+  height: 95px;
+  background: #D62B2E;
+  border-radius: 7px;
+  border-style: none;
+  font: 32px/37px roboto;
+  color: white;
+  cursor: pointer;
+}
+
+.card2 {
+  padding-top: 118px;
+}
+
+@media (max-width: 1200px) {
+  .newGrid > .card {
+    width: 157px;
+    height: 250px;
+    margin-right: 4%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .header {
+    font: 38px/40px roboto;
+  }
+  .mainPage {
+    margin-left: 30px;
+  }
+}
+
+@media (max-width: 900px) {
+  .card2 {
+    display: none;
+  }
+  .newGrid > .card {
+    width: 129px;
+    height: 207px;
+  }
+}
+
+@media (max-width: 870px) {
+  .card {
+    width: 157px;
+    height: 250px;
+    margin-right: 4%;
+  }
+  .button {
+    width: 100%;
+    height: 30%;
+    font: 1.5em/1em roboto;
+    }
+  .list{
+    font: 2em/1.5em roboto;
+    margin-bottom: 0;
+  }
+  .levelList{
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 732px) {
+  .newGrid {
+    grid-template-columns: 30% 30% 30%;
+  }
+}
+
+@media (max-width: 600px) {
+   .card, .newGrid > .card {
+    width: 88px;
+    height: 142px;
+   }
+   .lightLevel {
+    height: 100vh;
+  }
+}
+
+@media(max-width: 359px) {
+  .card, .newGrid > .card {
+    width: 73px;
+    height: 114px;
+  }
+  .mainPage {
+    margin-top: 6vh;
+  }
+}
