@@ -12,16 +12,16 @@
 }
 
 .header {
-  font: 57px/40px 'roboto';
+  font: 57px/40px 'roboto', sans-serif;
   margin-bottom: 8px;
 }
 
 .insctruction {
-  font: 19px/24px roboto;
+  font: 19px/24px roboto, sans-serif;
 }
 
 .list {
-  font: 50px/59px roboto;
+  font: 50px/59px roboto, sans-serif;
   list-style: none;
   margin-bottom: 20px;
 }
@@ -68,19 +68,19 @@
   transform-style: preserve-3d;
   transition: transform 2s;
   cursor: pointer;
-  }
+}
 
 .card:hover {
   transform: rotate(-3.08deg) translateY(-15px);
-  transition: transform .4s;
+  transition: transform 0.4s;
   box-shadow: 10px 10px 15px rgba(0.5);
- }
+}
 
 .front-card,
 .back-card {
   position: absolute;
   height: 100%;
- }
+}
 
 .back-card {
   transform: rotateY(180deg);
@@ -90,7 +90,9 @@
   transform: rotateY(180deg);
 }
 
-.light, .medium, .hard {
+.light, 
+.medium, 
+.hard {
   display: none;
 }
 
@@ -126,6 +128,7 @@
   .header {
     font: 38px/40px roboto, sans-serif;
   }
+
   .mainPage {
     margin-left: 30px;
   }
@@ -135,6 +138,7 @@
   .card2 {
     display: none;
   }
+
   .newGrid > .card {
     width: 129px;
     height: 207px;
@@ -147,15 +151,18 @@
     height: 250px;
     margin-right: 4%;
   }
+
   .button {
     width: 100%;
     height: 30%;
-    font: 1.5em/1em roboto;
+    font: 1.5em/1em roboto, sans-serif;
     }
+
   .list {
-    font: 2em/1.5em roboto;
+    font: 2em/1.5em roboto, sans-serif;
     margin-bottom: 0;
   }
+
   .levelList {
     margin-bottom: 30px;
   }
@@ -168,20 +175,24 @@
 }
 
 @media (max-width: 600px) {
-   .card, .newGrid > .card {
+   .card, 
+   .newGrid > .card {
     width: 88px;
     height: 142px;
    }
+
    .lightLevel {
     height: 100vh;
   }
 }
 
 @media(max-width: 359px) {
-  .card, .newGrid > .card {
+  .card, 
+  .newGrid > .card {
     width: 73px;
     height: 114px;
   }
+
   .mainPage {
     margin-top: 6vh;
   }
