@@ -1,8 +1,8 @@
 @font-face {
-    font-family: 'roboto';
-    src: url('fontsNew/roboto-700-normal.woff2') format('woff2'),
-         url('fontsNew/roboto-700-normal.woff') format('woff'), 
-         url('fontsNew/roboto-700-normal.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
+  font-family: 'roboto';
+  src: url('fontsNew/roboto-700-normal.woff2') format('woff2'),
+  url('fontsNew/roboto-700-normal.woff') format('woff'), 
+  url('fontsNew/roboto-700-normal.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
 }

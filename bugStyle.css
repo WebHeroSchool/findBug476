@@ -4,11 +4,13 @@
   font-family: 'roboto', sans-serif;
   color: white;
 }
+
 .mainPage {
   margin-left: 140px;
   margin-top: 10vh;
   height: 100vh;
 }
+
 .header {
   font: 57px/40px 'roboto';
   margin-bottom: 8px;
@@ -24,7 +26,7 @@
   margin-bottom: 20px;
 }
 
-.list:hover{
+.list:hover {
   cursor: pointer;
   opacity: 80%;
 }
@@ -46,7 +48,7 @@
   height: 100vh;
   min-height: 625px;
   perspective: 1000px;
-  }
+}
 
 .newGrid {
   display: grid;
@@ -71,7 +73,7 @@
 .card:hover {
   transform: rotate(-3.08deg) translateY(-15px);
   transition: transform .4s;
-  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 10px 10px 15px rgba(0.5);
  }
 
 .front-card,
@@ -100,10 +102,10 @@
 .button {
   width: 352px;
   height: 95px;
-  background: #D62B2E;
+  background: #d62b2e;
   border-radius: 7px;
   border-style: none;
-  font: 32px/37px roboto;
+  font: 32px/37px roboto, sans-serif;
   color: white;
   cursor: pointer;
 }
@@ -122,7 +124,7 @@
 
 @media (max-width: 1000px) {
   .header {
-    font: 38px/40px roboto;
+    font: 38px/40px roboto, sans-serif;
   }
   .mainPage {
     margin-left: 30px;
@@ -150,11 +152,11 @@
     height: 30%;
     font: 1.5em/1em roboto;
     }
-  .list{
+  .list {
     font: 2em/1.5em roboto;
     margin-bottom: 0;
   }
-  .levelList{
+  .levelList {
     margin-bottom: 30px;
   }
 }
