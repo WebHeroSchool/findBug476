@@ -44,7 +44,7 @@ button.onclick = function () {
       hardLevel.forEach((element) => {
         element.classList.remove("hard");
       });
-      lightLevel.classList.add('newGrid');
+      lightLevel.classList.add("newGrid");
       numberOfCards = 10;
       break;
   }
@@ -62,14 +62,14 @@ cards.forEach((card) => {
       hasFlippedCard = false;
     } else {
       card.classList.add("flip");
-      (function mixCards() {
+      let mixCards = function() {
         let randomCard = Math.floor(Math.random() * numberOfCards);
         for (let i = 0; i < numberOfCards; i++ ) {
           if (i === randomCard) {
             cards[i].lastElementChild.src = "img/bug.png";
-           };
+          };
         };
-      })();
+      }();
       hasFlippedCard = true;
     }
   });
@@ -77,14 +77,14 @@ cards.forEach((card) => {
 
 lightLevel.addEventListener ("click", (event) => {
     if(hasFlippedCard) {
-    mainPage.hidden = false;
-    lightLevel.classList.add("light");
-    cards.forEach((item) => item.classList.remove("flip"));
-    cards.forEach((item) => item.lastElementChild.src = "img/finish.png");
-    hasFlippedCard = false;
-  } else {
-    card.classList.add("flip");
-    (function mixCards() {
+      mainPage.hidden = false;
+      lightLevel.classList.add("light");
+      cards.forEach((item) => item.classList.remove("flip"));
+      cards.forEach((item) => item.lastElementChild.src = "img/finish.png");
+      hasFlippedCard = false;
+    } else {
+      card.classList.add("flip");
+      (function mixCards() {
         let randomCard = Math.floor(Math.random() * numberOfCards);
         for (let i = 0; i < numberOfCards; i++ ) {
           if (i === randomCard) {
