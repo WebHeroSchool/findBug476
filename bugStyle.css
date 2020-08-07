@@ -176,7 +176,7 @@
 
 @media (max-width: 600px) {
   .card,
-  .newGrid
+  .newGrid 
   .card {
     width: 88px;
     height: 142px;
@@ -194,6 +194,7 @@
     width: 73px;
     height: 114px;
   }
+}
 
   .mainPage {
     margin-top: 6vh;
