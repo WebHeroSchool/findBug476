@@ -175,8 +175,9 @@
 }
 
 @media (max-width: 600px) {
-  .card, 
-  .newGrid > .card {
+  .card,
+  .newGrid
+  .card {
     width: 88px;
     height: 142px;
   }
@@ -188,7 +189,7 @@
 
 @media(max-width: 359px) {
   .card,
-  .newGrid 
+  .newGrid
   .card {
     width: 73px;
     height: 114px;

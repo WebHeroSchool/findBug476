@@ -55,6 +55,7 @@ button.onclick = function () {
 let hasFlippedCard = false;
 cards.forEach((card) => {
   card.addEventListener ("click", (event) => {
+    event.stopPropagation();
     if(hasFlippedCard) {
 	  mainPage.hidden = false;
 	  lightLevel.classList.add("light");
@@ -75,3 +76,24 @@ cards.forEach((card) => {
 	}
 	});
 	});
+
+lightLevel.addEventListener ("click", (event) => {
+    if(hasFlippedCard) {
+    mainPage.hidden = false;
+    lightLevel.classList.add("light");
+    cards.forEach((item) => item.classList.remove("flip"));
+    cards.forEach((item) => item.lastElementChild.src = "img/finish.png");
+    hasFlippedCard = false;
+  } else {
+    card.classList.add("flip");
+    (function mixCards() {
+        let randomCard = Math.floor(Math.random() * numberOfCards);
+        for (let i = 0; i < numberOfCards; i++ ) {
+          if (i === randomCard) {
+            cards[i].lastElementChild.src = "img/bug.png";
+           };
+        };  
+      })();
+    hasFlippedCard = true;
+  }
+  });
