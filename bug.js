@@ -5,6 +5,8 @@ let mediumLevel = document.querySelectorAll(".medium");
 let hardLevel = document.querySelectorAll(".hard");
 let cards = document.querySelectorAll(".card");
 let elements = document.querySelectorAll(".list");
+let numberOfCards;
+let hasFlippedCard = false;
 
 const chooseLevel = (elem) => {
   elements.forEach((item) => item.classList.remove("marker"));
@@ -12,11 +14,10 @@ const chooseLevel = (elem) => {
 };
 elements.forEach((item) => item.addEventListener("click", chooseLevel));
 
-let numberOfCards;
 button.onclick = function () {
+  let currentLevel = document.querySelector(".marker").getAttribute("id");
   mainPage.hidden = true;
   lightLevel.classList.remove("light");
-  let currentLevel = document.querySelector(".marker").getAttribute("id");
   lightLevel.classList.remove("newGrid");
   switch (currentLevel) {
     case "light":
@@ -50,11 +51,10 @@ button.onclick = function () {
   }
 };
 
-let mixCards = function() {
+let mixCards = (cards) => {
   let randomCard = cards[Math.floor(Math.random() * numberOfCards)];
   randomCard.lastElementChild.src = "img/bug.png";
 };
-let hasFlippedCard = false;
 cards.forEach((card) => {
   card.addEventListener ("click", (event) => {
     event.stopPropagation();
