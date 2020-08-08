@@ -63,14 +63,14 @@ cards.forEach((card) => {
     } else {
       card.classList.add("flip");
       let mixCards = (function() {
-        let randomCard = Math.floor(Math.random() * numberOfCards);
-        for (let i = 0; i < numberOfCards; i++ ) {
-          if (i === randomCard) {
-            let superCard = cards[i];
-            superCard.lastElementChild.src = "img/bug.png";
-            // cards[i].lastElementChild.src = "img/bug.png";
-          };
-        };
+         let randomCard = cards[Math.floor(Math.random() * numberOfCards)];
+             randomCard.lastElementChild.src = "img/bug.png";
+        // let randomCard = Math.floor(Math.random() * numberOfCards);
+        // for (let i = 0; i < numberOfCards; i++ ) {
+        //   if (i === randomCard) {
+        //     cards[i].lastElementChild.src = "img/bug.png";
+        //   };
+        // };
       })();
       hasFlippedCard = true;
     }
