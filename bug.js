@@ -50,6 +50,10 @@ button.onclick = function () {
   }
 };
 
+let mixCards = function() {
+  let randomCard = cards[Math.floor(Math.random() * numberOfCards)];
+  randomCard.lastElementChild.src = "img/bug.png";
+};
 let hasFlippedCard = false;
 cards.forEach((card) => {
   card.addEventListener ("click", (event) => {
@@ -61,17 +65,8 @@ cards.forEach((card) => {
       cards.forEach((item) => item.lastElementChild.src = "img/finish.png");
       hasFlippedCard = false;
     } else {
+      mixCards();
       card.classList.add("flip");
-      let mixCards = (function() {
-         let randomCard = cards[Math.floor(Math.random() * numberOfCards)];
-             randomCard.lastElementChild.src = "img/bug.png";
-        // let randomCard = Math.floor(Math.random() * numberOfCards);
-        // for (let i = 0; i < numberOfCards; i++ ) {
-        //   if (i === randomCard) {
-        //     cards[i].lastElementChild.src = "img/bug.png";
-        //   };
-        // };
-      })();
       hasFlippedCard = true;
     }
   });
