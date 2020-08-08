@@ -66,7 +66,9 @@ cards.forEach((card) => {
         let randomCard = Math.floor(Math.random() * numberOfCards);
         for (let i = 0; i < numberOfCards; i++ ) {
           if (i === randomCard) {
-            cards[i].lastElementChild.src = "img/bug.png";
+            let superCard = cards[i];
+            superCard.lastElementChild.src = "img/bug.png";
+            // cards[i].lastElementChild.src = "img/bug.png";
           };
         };
       })();
