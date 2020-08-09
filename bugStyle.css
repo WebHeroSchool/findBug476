@@ -3,17 +3,19 @@
   background-size: cover;
   font-family: 'roboto', sans-serif;
   color: white;
+  height: 100vh;
+  margin: 0;
 }
 
 .mainPage {
   margin-left: 140px;
-  margin-top: 10vh;
   height: 100vh;
 }
 
 .header {
   font: 57px/40px 'roboto', sans-serif;
-  margin-bottom: 8px;
+  margin: 0;
+  padding-top: 40px;
 }
 
 .insctruction {
@@ -39,31 +41,23 @@
   list-style-image: url(../img/mark.png);
 }
 
-.lightLevel {
+.lightLevel, .newGrid {
   display: grid;
   grid-template-columns: 30% 30% 30%;
   justify-items: center;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  min-height: 625px;
+  height: 100%;
   perspective: 1000px;
 }
 
 .newGrid {
-  display: grid;
   grid-template-columns: repeat(5, 20%);
-  justify-items: center;
-  justify-content: center;
-  align-items: center;
-  min-height: 625px;
-  perspective: 1000px;
 }
 
 .card {
-  width: 218px;
-  height: 341px;
-  margin-bottom: 20px;
+  width: 12vw;
+  height: 19vw;
   position: relative;
   transform-style: preserve-3d;
   transition: transform 2s;
@@ -113,24 +107,13 @@
 }
 
 .card2 {
-  padding-top: 118px;
-}
-
-@media (max-width: 1200px) {
-  .newGrid > .card {
-    width: 157px;
-    height: 250px;
-    margin-right: 4%;
-  }
+  width: 32vw;
+  padding-top: 113px;
 }
 
 @media (max-width: 1000px) {
   .header {
     font: 38px/40px roboto, sans-serif;
-  }
-
-  .mainPage {
-    margin-left: 30px;
   }
 }
 
@@ -139,19 +122,12 @@
     display: none;
   }
 
-  .newGrid > .card {
-    width: 129px;
-    height: 207px;
+  .mainPage {
+    padding: 9vw 10px;
   }
 }
 
 @media (max-width: 870px) {
-  .card {
-    width: 157px;
-    height: 250px;
-    margin-right: 4%;
-  }
-
   .button {
     width: 100%;
     height: 30%;
@@ -170,33 +146,18 @@
 
 @media (max-width: 732px) {
   .newGrid {
-    grid-template-columns: 30% 30% 30%;
+    grid-template-columns: repeat(4, 25%);
   }
 }
 
 @media (max-width: 600px) {
-  .card,
-  .newGrid 
-  .card {
-    width: 88px;
-    height: 142px;
-  }
-
   .lightLevel {
     height: 100vh;
   }
 }
 
 @media(max-width: 359px) {
-  .card,
-  .newGrid
-  .card {
-    width: 73px;
-    height: 114px;
-  }
-}
-
-  .mainPage {
-    margin-top: 6vh;
+  .header {
+    padding-top: 0;
   }
 }

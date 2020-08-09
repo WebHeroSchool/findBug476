@@ -51,7 +51,7 @@ button.onclick = function () {
   }
 };
 
-let mixCards = (cards) => {
+let mixCards = () => {
   let randomCard = cards[Math.floor(Math.random() * numberOfCards)];
   randomCard.lastElementChild.src = "img/bug.png";
 };
