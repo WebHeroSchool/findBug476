@@ -1,0 +1,164 @@
+.wrap {
+  background: url(../img/background.png) no-repeat;
+  background-size: cover;
+  font-family: 'roboto', sans-serif;
+  color: white;
+  height: 100vh;
+  margin: 0;
+}
+
+.mainPage {
+  margin-left: 140px;
+  height: 100vh;
+}
+
+.header {
+  font: 57px/40px 'roboto', sans-serif;
+  margin: 0;
+  padding-top: 40px;
+}
+
+.insctruction {
+  font: 19px/24px roboto, sans-serif;
+}
+
+.list {
+  font: 50px/59px roboto, sans-serif;
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.list:hover {
+  cursor: pointer;
+  opacity: 80%;
+}
+
+.levelList {
+  margin-bottom: 50px;
+}
+
+.marker {
+  list-style-image: url(../img/mark.png);
+}
+
+.lightLevel,
+.newGrid {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  perspective: 1000px;
+}
+
+.newGrid {
+  grid-template-columns: repeat(5, 20%);
+}
+
+.card {
+  width: 12vw;
+  height: 19vw;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 2s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: rotate(-3.08deg) translateY(-15px);
+  transition: transform .4s;
+  box-shadow: 10px 10px 15px rgba(.5);
+}
+
+.front-card,
+.back-card {
+  position: absolute;
+  height: 100%;
+}
+
+.back-card {
+  transform: rotateY(180deg);
+}
+
+.card.flip {
+  transform: rotateY(180deg);
+}
+
+.light,
+.medium,
+.hard {
+  display: none;
+}
+
+.buttonWithCard {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  width: 352px;
+  height: 95px;
+  background: #d62b2e;
+  border-radius: 7px;
+  border-style: none;
+  font: 32px/37px roboto, sans-serif;
+  color: white;
+  cursor: pointer;
+}
+
+.card2 {
+  width: 32vw;
+  padding-top: 113px;
+}
+
+@media (max-width: 1000px) {
+  .header {
+    font: 38px/40px roboto, sans-serif;
+  }
+}
+
+@media (max-width: 900px) {
+  .card2 {
+    display: none;
+  }
+
+  .mainPage {
+    padding: 9vw 10px;
+  }
+}
+
+@media (max-width: 870px) {
+  .button {
+    width: 100%;
+    height: 30%;
+    font: 1.5em/1em roboto, sans-serif;
+  }
+
+  .list {
+    font: 2em/1.5em roboto, sans-serif;
+    margin-bottom: 0;
+  }
+
+  .levelList {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 732px) {
+  .newGrid {
+    grid-template-columns: repeat(4, 25%);
+  }
+}
+
+@media (max-width: 600px) {
+  .lightLevel {
+    height: 100vh;
+  }
+}
+
+@media (max-width: 359px) {
+  .header {
+    padding-top: 0;
+  }
+}
