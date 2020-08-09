@@ -41,7 +41,8 @@
   list-style-image: url(../img/mark.png);
 }
 
-.lightLevel, .newGrid {
+.lightLevel,
+.newGrid {
   display: grid;
   grid-template-columns: 30% 30% 30%;
   justify-items: center;
@@ -66,8 +67,8 @@
 
 .card:hover {
   transform: rotate(-3.08deg) translateY(-15px);
-  transition: transform 0.4s;
-  box-shadow: 10px 10px 15px rgba(0.5);
+  transition: transform .4s;
+  box-shadow: 10px 10px 15px rgba(.5);
 }
 
 .front-card,
@@ -156,7 +157,7 @@
   }
 }
 
-@media(max-width: 359px) {
+@media (max-width: 359px) {
   .header {
     padding-top: 0;
   }
